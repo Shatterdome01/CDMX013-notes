@@ -1,3 +1,6 @@
+body{
+  background-color: #404040;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +38,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.font{
+  font-family: 'Quicksand';
+  color: #ffff;
+  height: 100vh; /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150%;
+  flex-direction: column;
+}
+.google-logo{
+  border-radius: 10%;
+}
+.google-logo:hover{
+  box-shadow: 0px 0px 4px 3px #adadad;
 }

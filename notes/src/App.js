@@ -1,25 +1,23 @@
+import { Routes, Route } from 'react-router-dom'
 import Login from "./components/noAuth/Login.js";
-import {useState} from "react";
+import Main from "./components/Main.js"
+import { useState } from "react";
+import './App.css'
+
 
 function App() {
-  const [color] = useState('color');
-  // const [fontLogo]=useState('font1');
-  // const handleChangeColor =()=>{
-  //   if(color==='red'){
-  //     setColor('green');
-  //   } else if( color==='green'){
-  //     setColor('yellow')
-  //   } else if( color==='yellow'){
-  //     setColor('red')
-  //   }
-  // }
- 
-  //<!----<button onClick={handleChangeColor}> Cambia </button>------>
+  const [user, setUser] = useState(null);
+  if (user === null) {
+    return (
+      <div>
+        <Login setUser={setUser} />
+      </div>
+    );
+  }
   return (
     <div>
-      <Login color={color}/>
+      <Main />
     </div>
   );
 }
-
 export default App;
